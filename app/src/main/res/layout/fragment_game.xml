@@ -33,7 +33,7 @@
         android:layout_marginTop="@dimen/unscramble_text_margin"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
-        android:textColor="@color/black"
+        android:textColor="?android:textColorPrimary"
         app:layout_constraintTop_toBottomOf="@id/text_score"
         tools:text="Unscramble" />
 
@@ -77,7 +77,8 @@
         app:layout_constraintEnd_toStartOf="@id/btn_submit"
         app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edt_layout_scramble_word" />
+        app:layout_constraintTop_toBottomOf="@id/edt_layout_scramble_word"
+        app:shapeAppearance="@style/ShapeAppearance.App.Medium" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_submit"
@@ -88,7 +89,8 @@
         android:text="@string/submit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/btn_skip"
-        app:layout_constraintTop_toBottomOf="@id/edt_layout_scramble_word" />
+        app:layout_constraintTop_toBottomOf="@id/edt_layout_scramble_word"
+        app:shapeAppearance="@style/ShapeAppearance.App.Medium" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
