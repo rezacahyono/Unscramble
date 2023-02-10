@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/root_padding"
+    tools:context=".ui.game.GameFragment">
+
+    <include
+        android:id="@+id/text_stage"
+        layout="@layout/text_header"
+        android:layout_width="128dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@id/text_score"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/text_score"
+        layout="@layout/text_header"
+        android:layout_width="128dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/text_stage"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_unscramble_word"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/unscramble_text_margin"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/text_score"
+        tools:text="Unscramble" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_instruction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/instruction_text_margin"
+        android:text="@string/word_unscramble_word"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+        app:layout_constraintTop_toBottomOf="@id/tv_unscramble_word" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edt_layout_scramble_word"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/medium_extra_padding"
+        android:hint="@string/hint_scramble_word"
+        app:layout_constraintTop_toBottomOf="@id/tv_instruction">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_scramble_word"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:maxLines="1"
+            android:textColorHint="@android:color/darker_gray" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_skip"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/medium_extra_padding"
+        android:layout_marginEnd="@dimen/small_padding"
+        android:text="@string/skip"
+        app:layout_constraintEnd_toStartOf="@id/btn_submit"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edt_layout_scramble_word" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_submit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/small_padding"
+        android:layout_marginTop="@dimen/medium_extra_padding"
+        android:text="@string/submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn_skip"
+        app:layout_constraintTop_toBottomOf="@id/edt_layout_scramble_word" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

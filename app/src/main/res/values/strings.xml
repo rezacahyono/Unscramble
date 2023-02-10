@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">Unscramble</string>
+
+    <string name="title_score">Score</string>
+    <string name="title_stage">Stage</string>
+    <string name="word_count">%s to %s words</string>
+    <string name="score_points">%s points</string>
+    <string name="word_unscramble_word">Unscramble the word using all the letters</string>
+    <string name="hint_scramble_word">Enter your word</string>
+    <string name="skip">Skip</string>
+    <string name="submit">Submit</string>
+    <string name="try_again">Try Again…</string>
+    <string name="congratulation">Congratulations!</string>
+    <string name="final_score">Your score: %s Points</string>
+    <string name="restart">Restart?</string>
+    <string name="exit">Exit!</string>
 </resources>
